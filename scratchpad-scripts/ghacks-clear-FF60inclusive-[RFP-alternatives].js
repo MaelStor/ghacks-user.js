@@ -1,36 +1,34 @@
 /***
+ This will reset the preferences that are under sections 4600 & 4700 in the ghacks user.js
+ up to and including release 60-beta. These are the prefs that are no longer necessary,
+ or they conflict with, privacy.resistFingerprinting if you have that enabled.
 
  For instructions see:
  https://github.com/ghacksuserjs/ghacks-user.js/wiki/3.1-Resetting-Inactive-Prefs-[Scripts]
-
 ***/
-
+ 
 (function() {
   let ops = [
-    /* --- 57-alpha --- */
-    /* commented out */
-    'browser.storageManager.enabled',
-    'dom.storageManager.enabled',
-    /* removed from the user.js */
-    'browser.search.geoip.timeout',
-    'geo.wifi.xhr.timeout',
-    'gfx.layerscope.enabled',
-    'media.webspeech.recognition.enable',
-    /* moved to RFP ALTERNATIVES */
-    'dom.w3c_touch_events.enabled',
+    /* section 4600 */
+    'dom.maxHardwareConcurrency',
+    'dom.enable_resource_timing',
+    'dom.enable_performance',
+    'device.sensors.enabled',
+    'browser.zoom.siteSpecific',
+    'dom.gamepad.enabled',
+    'dom.netinfo.enabled',
+    'media.webspeech.synth.enabled',
     'media.video_stats.enabled',
-    /* moved to DEPRECATED/REMOVED */
-    'browser.bookmarks.showRecentlyBookmarked',
-    'browser.casting.enabled',
-    'devtools.webide.autoinstallFxdtAdapters',
-    'media.eme.chromium-api.enabled',
-    'social.directories',
-    'social.enabled',
-    'social.remote-install.enabled',
-    'social.share.activationPanelEnabled',
-    'social.shareDirectory',
-    'social.toast-notifications.enabled',
-    'social.whitelist',
+    'dom.w3c_touch_events.enabled',
+    'media.ondevicechange.enabled',
+    'webgl.enable-debug-renderer-info',
+    /* section 4700 */
+    'general.useragent.override',
+    'general.buildID.override',
+    'general.appname.override',
+    'general.appversion.override',
+    'general.platform.override',
+    'general.oscpu.override',
     /* reset parrot: check your open about:config after running the script */
     '_user.js.parrot'
   ]

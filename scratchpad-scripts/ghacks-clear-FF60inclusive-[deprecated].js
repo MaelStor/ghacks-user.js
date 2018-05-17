@@ -1,21 +1,42 @@
 /***
-
  This will reset the preferences that have been deprecated by Mozilla
- and used in the ghacks user.js up to and including release 57-alpha
+ and used in the ghacks user.js up to and including release 60-beta
 
  It is in reverse order, so feel free to remove sections that do not apply
 
  For instructions see:
  https://github.com/ghacksuserjs/ghacks-user.js/wiki/3.1-Resetting-Inactive-Prefs-[Scripts]
-
 ***/
 
 (function() {
   let ops = [
     /* deprecated */
 
-    /* ESR52.x users can remove sections 53-57 but it is not
+    /* ESR52.x users can remove sections 53-60 but it is not
        crucial as your user.js will reinstate them */
+    /* 60 */
+    'browser.newtabpage.directory.source',
+    'browser.newtabpage.enhanced',
+    'browser.newtabpage.introShown',
+    'extensions.shield-recipe-client.enabled',
+    'extensions.shield-recipe-client.api_url',
+    'browser.newtabpage.activity-stream.enabled',
+    'dom.workers.enabled',
+    'view_source.tab',
+    /* 59 */
+    'intl.locale.matchOS',
+    'general.useragent.locale',
+    'datareporting.healthreport.about.reportUrl',
+    'dom.flyweb.enabled',
+    'security.mixed_content.use_hsts',
+    'security.mixed_content.send_hsts_priming',
+    'network.http.referer.userControlPolicy',
+    'security.xpconnect.plugin.unrestricted',
+    'media.getusermedia.screensharing.allowed_domains',
+    'camera.control.face_detection.enabled',
+    'dom.disable_window_status_change',
+    'dom.idle-observers-api.enabled',
+    /* 58 : nothing */
     /* 57 */
     'social.whitelist',
     'social.toast-notifications.enabled',
